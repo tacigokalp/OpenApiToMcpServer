@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/openapitomcpstainless-typescript.git
-cd openapitomcpstainless-typescript
+git clone git@github.com:tacigokalp/OpenApiToMcpServer.git
+cd OpenApiToMcpServer
 ./scripts/bootstrap
 ./scripts/build
 ```
@@ -41,11 +41,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "openapitomcpstainless_api": {
       "command": "node",
-      "args": [
-        "/path/to/local/openapitomcpstainless-typescript/packages/mcp-server",
-        "--client=claude",
-        "--tools=dynamic"
-      ],
+      "args": ["/path/to/local/OpenApiToMcpServer/packages/mcp-server", "--client=claude", "--tools=dynamic"],
       "env": {
         "OPENAPITOMCPSTAINLESS_API_KEY": "My API Key",
         "OPENAPITOMCPSTAINLESS_ENVIRONMENT": "production"
