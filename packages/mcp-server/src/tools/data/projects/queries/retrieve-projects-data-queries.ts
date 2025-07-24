@@ -37,6 +37,9 @@ export const tool: Tool = {
     },
     required: ['projectId', 'queryId'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {

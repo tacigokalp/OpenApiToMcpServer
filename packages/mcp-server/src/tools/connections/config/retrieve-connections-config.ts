@@ -33,6 +33,9 @@ export const tool: Tool = {
     },
     required: ['connectionType'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {

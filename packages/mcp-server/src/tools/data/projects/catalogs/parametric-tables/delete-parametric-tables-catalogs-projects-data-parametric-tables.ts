@@ -44,6 +44,9 @@ export const tool: Tool = {
     },
     required: ['projectId', 'catalogId', 'toSchema', 'toTable'],
   },
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
