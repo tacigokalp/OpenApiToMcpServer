@@ -71,6 +71,7 @@ export const tool: Tool = {
     },
     required: ['projectId', 'catalogId'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {

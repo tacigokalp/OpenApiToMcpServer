@@ -65,6 +65,9 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
