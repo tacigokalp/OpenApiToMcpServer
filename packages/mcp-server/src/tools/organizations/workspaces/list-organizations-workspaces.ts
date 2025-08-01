@@ -40,9 +40,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { organizationId, ...body } = args as any;
+  const { organizationId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.organizations.workspaces.list(organizationId)),
+    await maybeFilter(jq_filter, await client.organizations.workspaces.list(organizationId)),
   );
 };
 
