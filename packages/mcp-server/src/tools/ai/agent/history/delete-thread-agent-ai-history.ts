@@ -43,9 +43,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { threadId, ...body } = args as any;
+  const { threadId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.ai.agent.history.deleteThread(threadId, body)),
+    await maybeFilter(jq_filter, await client.ai.agent.history.deleteThread(threadId, body)),
   );
 };
 

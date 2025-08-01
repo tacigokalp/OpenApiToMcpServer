@@ -48,8 +48,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { projectId, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.projects.update(projectId, body)));
+  const { projectId, jq_filter, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.projects.update(projectId, body)));
 };
 
 export default { metadata, tool, handler };

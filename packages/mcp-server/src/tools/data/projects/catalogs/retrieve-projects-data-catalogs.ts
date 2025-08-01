@@ -43,9 +43,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { catalogId, ...body } = args as any;
+  const { catalogId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.data.projects.catalogs.retrieve(catalogId, body)),
+    await maybeFilter(jq_filter, await client.data.projects.catalogs.retrieve(catalogId, body)),
   );
 };
 

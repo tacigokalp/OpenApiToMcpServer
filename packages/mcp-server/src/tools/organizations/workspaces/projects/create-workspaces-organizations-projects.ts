@@ -49,9 +49,9 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { workspaceId, ...body } = args as any;
+  const { workspaceId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.organizations.workspaces.projects.create(workspaceId, body)),
+    await maybeFilter(jq_filter, await client.organizations.workspaces.projects.create(workspaceId, body)),
   );
 };
 
