@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource organizations', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.organizations.retrieve('8db17e23-29de-4dab-8886-af9717e0e742');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource organizations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.organizations.list();
     const rawResponse = await responsePromise.asResponse();

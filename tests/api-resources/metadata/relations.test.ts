@@ -8,13 +8,11 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource relations', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.metadata.relations.retrieve('catalogId', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.metadata.relations.update('relationId', {
       projectId: 'projectId',
       catalogId: 'catalogId',
@@ -24,8 +22,7 @@ describe('resource relations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('delete: required and optional params', async () => {
+  test('delete: required and optional params', async () => {
     const response = await client.metadata.relations.delete('relationId', {
       projectId: 'projectId',
       catalogId: 'catalogId',
@@ -34,8 +31,7 @@ describe('resource relations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('add: required and optional params', async () => {
+  test('add: required and optional params', async () => {
     const response = await client.metadata.relations.add('columnName', {
       projectId: 'projectId',
       catalogId: 'catalogId',

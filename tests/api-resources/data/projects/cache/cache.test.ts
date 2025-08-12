@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource cache', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.data.projects.cache.update('960bd651-7b3c-4511-9a88-18e14ac7742a', {
       projectId: 'mtKDhe1U',
       fullRefreshCacheSchedule: { expression: 'expression' },
@@ -17,7 +16,7 @@ describe('resource cache', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.data.projects.cache.delete('cacheId', { projectId: 'projectId' });
     const rawResponse = await responsePromise.asResponse();
@@ -29,13 +28,12 @@ describe('resource cache', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.data.projects.cache.delete('cacheId', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('batch: required and optional params', async () => {
+  test('batch: required and optional params', async () => {
     const response = await client.data.projects.cache.batch('projectId', {
       body: [
         {
@@ -63,15 +61,13 @@ describe('resource cache', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('fullRefreshUpdate: required and optional params', async () => {
+  test('fullRefreshUpdate: required and optional params', async () => {
     const response = await client.data.projects.cache.fullRefreshUpdate('cacheId', {
       projectId: 'projectId',
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('incrementalUpdate: required and optional params', async () => {
+  test('incrementalUpdate: required and optional params', async () => {
     const response = await client.data.projects.cache.incrementalUpdate('cacheId', {
       projectId: 'projectId',
     });

@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource agent', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('askQuestion', async () => {
     const responsePromise = client.ai.agent.askQuestion('projectId', {});
     const rawResponse = await responsePromise.asResponse();

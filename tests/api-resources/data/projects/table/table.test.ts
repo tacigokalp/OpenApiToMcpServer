@@ -8,12 +8,11 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource table', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.data.projects.table.update('tableName', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.data.projects.table.delete('tableName', { projectId: 'projectId' });
     const rawResponse = await responsePromise.asResponse();
@@ -25,13 +24,12 @@ describe('resource table', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.data.projects.table.delete('tableName', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('import: required and optional params', async () => {
+  test('import: required and optional params', async () => {
     const response = await client.data.projects.table.import('tableName', {
       projectId: 'projectId',
       file: await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -39,7 +37,7 @@ describe('resource table', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveSample: only required params', async () => {
     const responsePromise = client.data.projects.table.retrieveSample('tableName', {
       projectId: 'projectId',
@@ -53,7 +51,7 @@ describe('resource table', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveSample: required and optional params', async () => {
     const response = await client.data.projects.table.retrieveSample('tableName', { projectId: 'projectId' });
   });

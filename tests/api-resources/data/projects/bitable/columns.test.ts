@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource columns', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('create: required and optional params', async () => {
+  test('create: required and optional params', async () => {
     const response = await client.data.projects.bitable.columns.create('tableName', {
       projectId: 'projectId',
       dataType: 'dataType',
@@ -21,8 +20,7 @@ describe('resource columns', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.data.projects.bitable.columns.update('columnName', {
       projectId: 'projectId',
       tableName: 'tableName',
@@ -35,12 +33,11 @@ describe('resource columns', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('list: required and optional params', async () => {
+  test('list: required and optional params', async () => {
     const response = await client.data.projects.bitable.columns.list('tableName', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.data.projects.bitable.columns.delete('columnName', {
       projectId: 'projectId',
@@ -55,7 +52,7 @@ describe('resource columns', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.data.projects.bitable.columns.delete('columnName', {
       projectId: 'projectId',

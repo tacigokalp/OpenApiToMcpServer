@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource status', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('list: required and optional params', async () => {
+  test('list: required and optional params', async () => {
     const response = await client.data.projects.cache.status.list('960bd651-7b3c-4511-9a88-18e14ac7742a', {
       projectId: 'mtKDhe1U',
       excludeLogs: true,

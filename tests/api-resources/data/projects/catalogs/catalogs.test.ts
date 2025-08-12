@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource catalogs', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.data.projects.catalogs.create('mtKDhe1U', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource catalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.retrieve('catalogId', { projectId: 'mtKDhe1U' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,12 +32,12 @@ describe('resource catalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.data.projects.catalogs.retrieve('catalogId', { projectId: 'mtKDhe1U' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.data.projects.catalogs.list('mtKDhe1U');
     const rawResponse = await responsePromise.asResponse();
@@ -49,7 +49,7 @@ describe('resource catalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.delete('catalogId', { projectId: 'mtKDhe1U' });
     const rawResponse = await responsePromise.asResponse();
@@ -61,7 +61,7 @@ describe('resource catalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.data.projects.catalogs.delete('catalogId', { projectId: 'mtKDhe1U' });
   });

@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource workspaces', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.organizations.workspaces.create(
       'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
@@ -23,7 +23,7 @@ describe('resource workspaces', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.organizations.workspaces.retrieve('workspaceId', {
       organizationId: 'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
@@ -37,14 +37,14 @@ describe('resource workspaces', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.organizations.workspaces.retrieve('workspaceId', {
       organizationId: 'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.organizations.workspaces.update('8eefb5a9-59f7-43cc-bacb-f0b0e0d1b0ea', {
       organizationId: 'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
@@ -58,7 +58,7 @@ describe('resource workspaces', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.organizations.workspaces.update('8eefb5a9-59f7-43cc-bacb-f0b0e0d1b0ea', {
       organizationId: 'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
@@ -67,7 +67,7 @@ describe('resource workspaces', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.organizations.workspaces.list('organizationId');
     const rawResponse = await responsePromise.asResponse();
@@ -79,7 +79,7 @@ describe('resource workspaces', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.organizations.workspaces.delete('8eefb5a9-59f7-43cc-bacb-f0b0e0d1b0ea', {
       organizationId: 'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
@@ -93,7 +93,7 @@ describe('resource workspaces', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.organizations.workspaces.delete('8eefb5a9-59f7-43cc-bacb-f0b0e0d1b0ea', {
       organizationId: 'd0d3c83f-29ed-4f2e-899d-1bfa00eb3cef',
