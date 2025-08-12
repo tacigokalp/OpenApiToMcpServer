@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource chat', () => {
-  // skipped: currently no good way to test endpoints with content type text/event-stream, Prism mock server will fail
+  // Prism doesn't support text/event-stream responses
   test.skip('streamMessage', async () => {
     const responsePromise = client.ai.agent.chat.streamMessage('projectId', {});
     const rawResponse = await responsePromise.asResponse();

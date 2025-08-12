@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource connections', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.connections.create('mtKDhe1U', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource connections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.connections.retrieve('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',
@@ -34,15 +34,14 @@ describe('resource connections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.connections.retrieve('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.connections.update('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',
       connectionCallback: 'connectionCallback',
@@ -52,7 +51,7 @@ describe('resource connections', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.connections.list('mtKDhe1U');
     const rawResponse = await responsePromise.asResponse();
@@ -64,7 +63,7 @@ describe('resource connections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.connections.delete('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',
@@ -78,14 +77,14 @@ describe('resource connections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.connections.delete('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('oauth2Callback', async () => {
     const responsePromise = client.connections.oauth2Callback('mtKDhe1U', {});
     const rawResponse = await responsePromise.asResponse();
@@ -97,7 +96,7 @@ describe('resource connections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveDetail: only required params', async () => {
     const responsePromise = client.connections.retrieveDetail('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',
@@ -111,7 +110,7 @@ describe('resource connections', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveDetail: required and optional params', async () => {
     const response = await client.connections.retrieveDetail('8db17e23-29de-4dab-8886-af9717e0e742', {
       projectId: 'mtKDhe1U',

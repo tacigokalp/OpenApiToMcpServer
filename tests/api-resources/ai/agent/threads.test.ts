@@ -8,18 +8,15 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource threads', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ai.agent.threads.retrieve('threadId', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('delete: required and optional params', async () => {
+  test('delete: required and optional params', async () => {
     const response = await client.ai.agent.threads.delete('threadId', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('updateDisplayName: required and optional params', async () => {
+  test('updateDisplayName: required and optional params', async () => {
     const response = await client.ai.agent.threads.updateDisplayName('threadId', {
       projectId: 'projectId',
       displayName: 'displayName',

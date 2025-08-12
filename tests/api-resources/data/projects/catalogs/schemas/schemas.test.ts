@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource schemas', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.schemas.list('catalogId', {
       projectId: 'mtKDhe1U',
@@ -22,7 +22,7 @@ describe('resource schemas', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.data.projects.catalogs.schemas.list('catalogId', { projectId: 'mtKDhe1U' });
   });

@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource initSession', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ui.initSession.retrieve({
       projectId: 'projectId',
       theme: 'theme',

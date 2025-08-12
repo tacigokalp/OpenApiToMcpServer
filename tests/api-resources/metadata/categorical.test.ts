@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource categorical', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('deleteValues: required and optional params', async () => {
+  test('deleteValues: required and optional params', async () => {
     const response = await client.metadata.categorical.deleteValues('columnName', {
       projectId: 'projectId',
       catalogId: 'catalogId',
@@ -18,8 +17,7 @@ describe('resource categorical', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('generateValues: required and optional params', async () => {
+  test('generateValues: required and optional params', async () => {
     const response = await client.metadata.categorical.generateValues('columnName', {
       projectId: 'projectId',
       catalogId: 'catalogId',
