@@ -33,6 +33,7 @@ export const tool: Tool = {
       },
       filters: {
         type: 'object',
+        additionalProperties: true,
       },
       from: {
         type: 'array',

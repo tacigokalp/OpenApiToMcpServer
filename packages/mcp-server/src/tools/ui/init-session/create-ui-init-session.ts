@@ -24,6 +24,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'A map of feature flags, where the key is the feature name and the value indicates if it is enabled.\n Defined feature flags are:\n  - createDataInPeaka : Flag indicating whether the user can create data in Peaka.\n  - queries : Flag indicating whether the user can use query functions.',
+        additionalProperties: true,
       },
       projectId: {
         type: 'string',

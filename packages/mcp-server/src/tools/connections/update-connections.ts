@@ -34,6 +34,7 @@ export const tool: Tool = {
         type: 'object',
         description:
           'Credential object for the connection.\n\nIts structure is dependent on the connection type and can be fetched by following url: /connections/config\n',
+        additionalProperties: true,
       },
       name: {
         type: 'string',
