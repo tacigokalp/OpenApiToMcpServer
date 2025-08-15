@@ -33,6 +33,7 @@ export const tool: Tool = {
       extraParameters: {
         type: 'object',
         description: 'Extra parameters for the catalog',
+        additionalProperties: true,
       },
       name: {
         type: 'string',
