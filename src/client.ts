@@ -786,6 +786,7 @@ export class Openapitomcpstainless {
   sql: API.Sql = new API.Sql(this);
   ai: API.AI = new API.AI(this);
 }
+
 Openapitomcpstainless.Organizations = Organizations;
 Openapitomcpstainless.Projects = Projects;
 Openapitomcpstainless.Connections = Connections;
@@ -795,6 +796,7 @@ Openapitomcpstainless.SupportedDrivers = SupportedDrivers;
 Openapitomcpstainless.Metadata = Metadata;
 Openapitomcpstainless.Sql = Sql;
 Openapitomcpstainless.AI = AI;
+
 export declare namespace Openapitomcpstainless {
   export type RequestOptions = Opts.RequestOptions;
 
