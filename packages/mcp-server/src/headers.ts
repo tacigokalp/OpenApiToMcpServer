@@ -17,7 +17,7 @@ export const parseAuthHeaders = (req: IncomingMessage): Partial<ClientOptions> =
   }
 
   const apiKey =
-    req.headers['x-openapitomcpstainless-api-key'] instanceof Array ?
+    Array.isArray(req.headers['x-openapitomcpstainless-api-key']) ?
       req.headers['x-openapitomcpstainless-api-key'][0]
     : req.headers['x-openapitomcpstainless-api-key'];
   return { apiKey };
