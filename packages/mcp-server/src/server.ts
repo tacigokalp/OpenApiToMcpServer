@@ -33,7 +33,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'openapitomcpstainless_api',
-      version: '0.0.1-alpha.0',
+      version: '0.0.1-alpha.1',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
