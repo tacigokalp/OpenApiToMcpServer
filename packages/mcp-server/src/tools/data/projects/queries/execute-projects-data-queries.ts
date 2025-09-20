@@ -33,6 +33,7 @@ export const tool: Tool = {
       },
       filters: {
         type: 'object',
+        additionalProperties: true,
       },
       from: {
         type: 'array',
@@ -75,12 +76,13 @@ export const tool: Tool = {
     },
     required: ['projectId'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { projectId, ...body } = args as any;
+  const { projectId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.data.projects.queries.execute(projectId, body)),
+    await maybeFilter(jq_filter, await client.data.projects.queries.execute(projectId, body)),
   );
 };
 

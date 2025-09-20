@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource tables', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.schemas.tables.list('public', {
       projectId: 'mtKDhe1U',
@@ -23,7 +23,7 @@ describe('resource tables', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.data.projects.catalogs.schemas.tables.list('public', {
       projectId: 'mtKDhe1U',
@@ -31,7 +31,7 @@ describe('resource tables', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveColumns: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.schemas.tables.retrieveColumns('actor', {
       projectId: 'mtKDhe1U',
@@ -47,7 +47,7 @@ describe('resource tables', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveColumns: required and optional params', async () => {
     const response = await client.data.projects.catalogs.schemas.tables.retrieveColumns('actor', {
       projectId: 'mtKDhe1U',
@@ -56,7 +56,7 @@ describe('resource tables', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveIsCached: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.schemas.tables.retrieveIsCached('actor', {
       projectId: 'mtKDhe1U',
@@ -72,7 +72,7 @@ describe('resource tables', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveIsCached: required and optional params', async () => {
     const response = await client.data.projects.catalogs.schemas.tables.retrieveIsCached('actor', {
       projectId: 'mtKDhe1U',
@@ -81,7 +81,7 @@ describe('resource tables', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStatistics: only required params', async () => {
     const responsePromise = client.data.projects.catalogs.schemas.tables.retrieveStatistics('actor', {
       projectId: 'mtKDhe1U',
@@ -97,7 +97,7 @@ describe('resource tables', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStatistics: required and optional params', async () => {
     const response = await client.data.projects.catalogs.schemas.tables.retrieveStatistics('actor', {
       projectId: 'mtKDhe1U',

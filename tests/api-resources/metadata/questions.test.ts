@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource questions', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('generate: required and optional params', async () => {
+  test('generate: required and optional params', async () => {
     const response = await client.metadata.questions.generate('projectId', { question: 'question' });
   });
 });

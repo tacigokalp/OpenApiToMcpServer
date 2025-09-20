@@ -37,12 +37,15 @@ export const tool: Tool = {
     },
     required: ['projectId', 'queryId'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { queryId, ...body } = args as any;
+  const { queryId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.data.projects.queries.retrieve(queryId, body)),
+    await maybeFilter(jq_filter, await client.data.projects.queries.retrieve(queryId, body)),
   );
 };
 

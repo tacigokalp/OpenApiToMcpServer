@@ -40,12 +40,15 @@ export const tool: Tool = {
     },
     required: ['projectId', 'catalogId', 'schemaName'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { schemaName, ...body } = args as any;
+  const { schemaName, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.data.projects.catalogs.schemas.tables.list(schemaName, body)),
+    await maybeFilter(jq_filter, await client.data.projects.catalogs.schemas.tables.list(schemaName, body)),
   );
 };
 

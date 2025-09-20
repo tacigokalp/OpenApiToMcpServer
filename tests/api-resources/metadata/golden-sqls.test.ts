@@ -8,13 +8,11 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource goldenSqls', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('delete: required and optional params', async () => {
+  test('delete: required and optional params', async () => {
     const response = await client.metadata.goldenSqls.delete('id', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('query: required and optional params', async () => {
+  test('query: required and optional params', async () => {
     const response = await client.metadata.goldenSqls.query('projectId', { q: 'q' });
   });
 });

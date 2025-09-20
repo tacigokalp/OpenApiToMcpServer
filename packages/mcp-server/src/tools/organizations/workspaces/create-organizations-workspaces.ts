@@ -42,12 +42,13 @@ export const tool: Tool = {
     },
     required: ['organizationId'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { organizationId, ...body } = args as any;
+  const { organizationId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.organizations.workspaces.create(organizationId, body)),
+    await maybeFilter(jq_filter, await client.organizations.workspaces.create(organizationId, body)),
   );
 };
 

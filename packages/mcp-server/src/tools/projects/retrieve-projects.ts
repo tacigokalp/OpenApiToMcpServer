@@ -34,11 +34,14 @@ export const tool: Tool = {
     },
     required: ['projectId'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { projectId, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.projects.retrieve(projectId)));
+  const { projectId, jq_filter, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.projects.retrieve(projectId)));
 };
 
 export default { metadata, tool, handler };

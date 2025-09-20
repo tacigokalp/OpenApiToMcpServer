@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource semanticCatalogs', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.data.projects.semanticCatalogs.update('catalogId', {
       projectId: 'projectId',
@@ -22,7 +22,7 @@ describe('resource semanticCatalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.data.projects.semanticCatalogs.update('catalogId', {
       projectId: 'projectId',
@@ -32,7 +32,7 @@ describe('resource semanticCatalogs', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.data.projects.semanticCatalogs.delete('tableId', {
       projectId: 'projectId',
@@ -47,7 +47,7 @@ describe('resource semanticCatalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.data.projects.semanticCatalogs.delete('tableId', {
       projectId: 'projectId',
@@ -55,7 +55,7 @@ describe('resource semanticCatalogs', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('semanticCatalogs', async () => {
     const responsePromise = client.data.projects.semanticCatalogs.semanticCatalogs('projectId', {});
     const rawResponse = await responsePromise.asResponse();
@@ -67,7 +67,7 @@ describe('resource semanticCatalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('share: only required params', async () => {
     const responsePromise = client.data.projects.semanticCatalogs.share('catalogId', {
       projectId: 'projectId',
@@ -81,7 +81,7 @@ describe('resource semanticCatalogs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('share: required and optional params', async () => {
     const response = await client.data.projects.semanticCatalogs.share('catalogId', {
       projectId: 'projectId',

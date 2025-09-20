@@ -8,7 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource apiKeys', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.projects.apiKeys.create('mtKDhe1U', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource apiKeys', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.projects.apiKeys.delete('21fd1a8d-88d5-4295-b792-5b2113138057', {
       projectId: 'mtKDhe1U',
@@ -34,7 +34,7 @@ describe('resource apiKeys', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.projects.apiKeys.delete('21fd1a8d-88d5-4295-b792-5b2113138057', {
       projectId: 'mtKDhe1U',

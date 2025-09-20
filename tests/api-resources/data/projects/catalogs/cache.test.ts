@@ -8,8 +8,7 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource cache', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieveStatus: required and optional params', async () => {
+  test('retrieveStatus: required and optional params', async () => {
     const response = await client.data.projects.catalogs.cache.retrieveStatus('catalogId', {
       projectId: 'mtKDhe1U',
     });

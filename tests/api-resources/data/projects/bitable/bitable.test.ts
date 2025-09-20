@@ -8,12 +8,11 @@ const client = new Openapitomcpstainless({
 });
 
 describe('resource bitable', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.data.projects.bitable.update('tableName', { projectId: 'projectId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.data.projects.bitable.delete('tableName', { projectId: 'projectId' });
     const rawResponse = await responsePromise.asResponse();
@@ -25,7 +24,7 @@ describe('resource bitable', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.data.projects.bitable.delete('tableName', { projectId: 'projectId' });
   });

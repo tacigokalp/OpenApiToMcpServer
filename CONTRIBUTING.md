@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/openapitomcpstainless-typescript.git
+$ npm install git+ssh://git@github.com:tacigokalp/OpenApiToMcpServer.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/openapitomcpstainless-typescript
-$ cd openapitomcpstainless-typescript
+$ git clone https://www.github.com/tacigokalp/OpenApiToMcpServer
+$ cd OpenApiToMcpServer
 
 # With yarn
 $ yarn link

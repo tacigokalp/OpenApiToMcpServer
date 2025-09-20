@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'retrieve_detail_connections',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nGet connection detail by ID. Returns only non-sensitive information.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  description: 'Credential object for the connection.\\n\\n Its structure is dependent on the connection type and can be fetched by following url: /connections/config'\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nGet connection detail by ID. Returns only non-sensitive information.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  description: 'Credential object for the connection.\\n\\n Its structure is dependent on the connection type and can be fetched by following url: /connections/config',\n  additionalProperties: true\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
@@ -37,12 +37,15 @@ export const tool: Tool = {
     },
     required: ['projectId', 'connectionId'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: Openapitomcpstainless, args: Record<string, unknown> | undefined) => {
-  const { connectionId, ...body } = args as any;
+  const { connectionId, jq_filter, ...body } = args as any;
   return asTextContentResult(
-    await maybeFilter(args, await client.connections.retrieveDetail(connectionId, body)),
+    await maybeFilter(jq_filter, await client.connections.retrieveDetail(connectionId, body)),
   );
 };
 
